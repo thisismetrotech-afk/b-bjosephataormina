@@ -14,7 +14,7 @@ const BOOKING_URL =
 const TRIPADVISOR_URL =
   "https://www.tripadvisor.it/Hotel_Review-g187892-d3475386-Reviews-B_B_Josepha-Taormina_Province_of_Messina_Sicily.html";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/place/Bed+And+Breakfast+Josepha/@37.8543056,15.2868093,17z";
+  "https://www.google.com/maps/place/Bed+And+Breakfast+Josepha/@37.8549293,15.2924389,18.5z/data=!3m1!5s0x131411a1da53a8c5:0xcfcef149f9eddc0c!4m10!3m9!1s0x131411a1db949131:0x634358c1bf202b09!5m3!1s2026-07-21!4m1!1i2!8m2!3d37.8543014!4d15.2893842!16s%2Fg%2F1tdlr5zb";
 const GOOGLE_REVIEWS_URL =
   "https://www.google.com/maps/place/Bed+And+Breakfast+Josepha/@37.8543056,15.2868093,17z/data=!4m8!3m7!1s0x131411a1db949131:0x634358c1bf202b09!8m2!3d37.8543014!4d15.2893842!9m1!1b1";
 
