@@ -5,6 +5,34 @@ import balconyAsset from "@/assets/balcony.asset.json";
 import bathroomAsset from "@/assets/bathroom.asset.json";
 import terraceAsset from "@/assets/terrace.asset.json";
 
+const GALLERY_IMAGES = [
+  {
+    src: "/images/camera-matrimoniale-blu.webp",
+    alt: "Camera matrimoniale del B&B Josepha con biancheria a righe blu",
+    label: "Camera matrimoniale",
+  },
+  {
+    src: "/images/terrazza-pranzo.webp",
+    alt: "Terrazza esterna del B&B Josepha con tavolo apparecchiato tra il verde",
+    label: "Terrazza",
+  },
+  {
+    src: "/images/sala-colazione.webp",
+    alt: "Sala colazione del B&B Josepha con tavoli apparecchiati",
+    label: "Sala colazione",
+  },
+  {
+    src: "/images/sala-pranzo.webp",
+    alt: "Sala da pranzo interna del B&B Josepha",
+    label: "Sala da pranzo",
+  },
+  {
+    src: "/images/vicolo-taormina.webp",
+    alt: "Vicolo in pietra nei pressi del B&B Josepha a Taormina",
+    label: "Nei dintorni",
+  },
+];
+
 export const Route = createFileRoute("/")({
   component: Index,
 });
@@ -32,6 +60,9 @@ function Index() {
           </a>
           <a href="#camere" className="hover:text-lemon transition-colors">
             Ambienti
+          </a>
+          <a href="#galleria" className="hover:text-lemon transition-colors">
+            Galleria
           </a>
           <a href="#servizi" className="hover:text-lemon transition-colors">
             Servizi
@@ -237,6 +268,38 @@ function Index() {
                 Porta Messina, il Corso Umberto e il Teatro Antico a pochi passi.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Galleria camere e struttura */}
+      <section id="galleria" className="py-28 md:py-32 bg-limestone">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-[11px] uppercase tracking-[0.3em] text-majolica font-medium mb-4 block">
+              Uno sguardo dentro casa
+            </span>
+            <h2 className="font-serif text-5xl md:text-6xl italic text-majolica">
+              Le camere e la struttura
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            {GALLERY_IMAGES.map((img) => (
+              <figure
+                key={img.src}
+                className="relative aspect-[4/3] overflow-hidden group first:col-span-2 first:aspect-[16/9] md:first:col-span-1 md:first:aspect-[4/3]"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-[10px] uppercase tracking-widest px-4 py-3">
+                  {img.label}
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
