@@ -31,6 +31,44 @@ const GALLERY_IMAGES = [
     alt: "Vicolo in pietra nei pressi del B&B Josepha a Taormina",
     label: "Nei dintorni",
   },
+  {
+    src: "/images/cortile-esterno.webp",
+    alt: "Cortile esterno del B&B Josepha con piante e sedute colorate",
+    label: "Cortile",
+  },
+  {
+    src: "/images/camera-con-armadio.webp",
+    alt: "Camera del B&B Josepha con armadio e letto matrimoniale",
+    label: "Camera con armadio",
+  },
+  {
+    src: "/images/camera-singola.webp",
+    alt: "Camera singola del B&B Josepha",
+    label: "Camera singola",
+  },
+  {
+    src: "/images/dettaglio-bagno.webp",
+    alt: "Dettaglio del bagno del B&B Josepha con maioliche blu e set di cortesia",
+    label: "Dettaglio bagno",
+  },
+];
+
+const BREAKFAST_IMAGES = [
+  {
+    src: "/images/colazione-buffet.webp",
+    alt: "Tavolo della colazione del B&B Josepha con brioche, agrumi e succo d'arancia",
+    label: "Colazione a buffet",
+  },
+  {
+    src: "/images/colazione-pancake.webp",
+    alt: "Pancake con fragole servito a colazione al B&B Josepha",
+    label: "Pancake e fragole",
+  },
+  {
+    src: "/images/colazione-salata.webp",
+    alt: "Colazione salata del B&B Josepha con focaccia, uovo e avocado",
+    label: "Colazione salata",
+  },
 ];
 
 export const Route = createFileRoute("/")({
@@ -288,6 +326,42 @@ function Index() {
               <figure
                 key={img.src}
                 className="relative aspect-[4/3] overflow-hidden group first:col-span-2 first:aspect-[16/9] md:first:col-span-1 md:first:aspect-[4/3]"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-[10px] uppercase tracking-widest px-4 py-3">
+                  {img.label}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Colazione */}
+      <section className="py-28 md:py-32 bg-white border-t border-border">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-[11px] uppercase tracking-[0.3em] text-terracotta font-medium mb-4 block">
+              Ogni mattina
+            </span>
+            <h2 className="font-serif text-5xl md:text-6xl italic mb-4">
+              La colazione
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Colazione a buffet dolce e salata preparata dalla signora Lucia,
+              con prodotti freschi e agrumi siciliani.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {BREAKFAST_IMAGES.map((img) => (
+              <figure
+                key={img.src}
+                className="relative aspect-[4/5] overflow-hidden group"
               >
                 <img
                   src={img.src}
