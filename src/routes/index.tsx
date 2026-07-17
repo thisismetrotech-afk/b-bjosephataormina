@@ -28,8 +28,8 @@ const GALLERY_IMAGES = [
   },
   {
     src: "/images/vicolo-taormina.webp",
-    alt: "Vicolo in pietra nei pressi del B&B Josepha a Taormina",
-    label: "Nei dintorni",
+    alt: "Vicolo in pietra davanti all'ingresso del B&B Josepha a Taormina",
+    label: "La strada davanti casa",
   },
   {
     src: "/images/cortile-esterno.webp",
