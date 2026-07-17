@@ -125,32 +125,32 @@ function Index() {
       {/* Hero */}
       <section
         id="top"
-        className="relative h-screen w-full flex items-center justify-center overflow-hidden"
+        className="relative w-full flex items-center justify-center overflow-hidden bg-stone-900 aspect-[3/4] sm:aspect-[16/10] md:h-screen md:aspect-auto"
       >
         <img
           src={heroPortaAsset.url}
           alt="Arco di Porta Messina con insegna del B&B Josepha, Vico Zecca 31 Taormina"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain md:object-cover"
           width={1920}
           height={1280}
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 text-center text-white px-4">
-          <p className="text-[11px] uppercase tracking-[0.4em] mb-6 opacity-90">
+          <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] mb-4 sm:mb-6 opacity-90">
             Boutique Bed &amp; Breakfast
           </p>
-          <h1 className="font-serif text-6xl md:text-8xl mb-6 leading-none">
+          <h1 className="font-serif text-4xl sm:text-6xl md:text-8xl mb-4 sm:mb-6 leading-none">
             Josepha Taormina
           </h1>
           <div className="flex items-center justify-center gap-4">
             <span className="h-px w-12 bg-white/60" />
-            <p className="italic font-serif text-lg md:text-xl">
+            <p className="italic font-serif text-base sm:text-lg md:text-xl">
               Via Vico Zecca, 31
             </p>
             <span className="h-px w-12 bg-white/60" />
           </div>
         </div>
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70">
+        <div className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70">
           <span className="text-[10px] uppercase tracking-widest">
             Scopri di più
           </span>
@@ -188,7 +188,7 @@ function Index() {
           <h2 className="font-serif text-5xl md:text-6xl text-terracotta leading-[1.05] italic">
             L'accoglienza di
             <br />
-            Io e Davide.
+            Laura e Davide.
           </h2>
           <div className="text-muted-foreground space-y-4 leading-relaxed max-w-md">
             <p>
