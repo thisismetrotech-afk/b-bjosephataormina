@@ -88,7 +88,7 @@ function Index() {
   return (
     <div className="bg-limestone text-foreground font-sans min-h-screen">
       {/* Navigation — logo & Prenota keep their own fixed colors; links auto-invert to stay legible over any background */}
-      <nav className="fixed top-0 w-full z-50 px-4 md:px-10 flex justify-between items-center h-14 sm:h-16 md:h-20">
+      <nav className="fixed top-0 w-full z-50 px-4 md:px-10 flex justify-between items-center h-20 sm:h-24 md:h-28 lg:h-32">
         <a href="#top" className="shrink-0 h-full py-2">
           <img
             src="/images/logo-josepha.webp"
@@ -105,7 +105,7 @@ function Index() {
           Prenota
         </a>
       </nav>
-      <div className="hidden lg:flex fixed top-0 inset-x-0 z-40 h-20 justify-center items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-medium mix-blend-difference text-white pointer-events-none">
+      <div className="hidden lg:flex fixed top-0 inset-x-0 z-40 h-32 justify-center items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-medium mix-blend-difference text-white pointer-events-none">
         <a href="#storia" className="hover:text-lemon transition-colors pointer-events-auto">
           La Storia
         </a>
