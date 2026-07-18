@@ -125,12 +125,42 @@ function Index() {
       {/* Hero */}
       <section
         id="top"
-        className="relative w-full flex items-center justify-center overflow-hidden bg-stone-900 aspect-[3/4] sm:aspect-[16/10] md:h-screen md:aspect-auto"
+        className="relative w-full flex items-center justify-center overflow-hidden bg-stone-900 h-screen min-h-[560px] sm:h-auto sm:min-h-0 sm:aspect-[16/10] md:h-screen md:aspect-auto"
       >
+        {/* Mobile — trittico: cortile / ingresso / colazione, per riempire lo schermo senza spazi vuoti */}
+        <div className="sm:hidden absolute inset-0 flex flex-col">
+          <div className="flex-1 overflow-hidden">
+            <img
+              src="/images/cortile-esterno.webp"
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="w-full aspect-[1920/1280] shrink-0 overflow-hidden">
+            <img
+              src={heroPortaAsset.url}
+              alt="Arco di Porta Messina con insegna del B&B Josepha, Vico Zecca 31 Taormina"
+              className="w-full h-full object-cover"
+              width={1920}
+              height={1280}
+            />
+          </div>
+          <div className="flex-1 overflow-hidden">
+            <img
+              src="/images/colazione-pancake.webp"
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Tablet/Desktop — foto piena */}
         <img
           src={heroPortaAsset.url}
           alt="Arco di Porta Messina con insegna del B&B Josepha, Vico Zecca 31 Taormina"
-          className="absolute inset-0 w-full h-full object-contain md:object-cover"
+          className="hidden sm:block absolute inset-0 w-full h-full object-contain md:object-cover"
           width={1920}
           height={1280}
         />
