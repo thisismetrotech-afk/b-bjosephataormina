@@ -87,40 +87,44 @@ const GOOGLE_REVIEWS_URL =
 function Index() {
   return (
     <div className="bg-limestone text-foreground font-sans min-h-screen">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 px-6 md:px-10 py-5 flex justify-between items-center mix-blend-difference text-white">
-        <a href="#top" className="font-serif text-2xl tracking-tight">
-          Josepha
+      {/* Navigation — logo & Prenota keep their own fixed colors; links auto-invert to stay legible over any background */}
+      <nav className="fixed top-0 w-full z-50 px-4 md:px-10 flex justify-between items-center h-14 sm:h-16 md:h-20">
+        <a href="#top" className="shrink-0 h-full py-2">
+          <img
+            src="/images/logo-josepha.webp"
+            alt="B&B Josepha Taormina"
+            className="h-full w-auto bg-white/95 rounded-2xl p-1.5 shadow-lg ring-1 ring-black/5"
+          />
         </a>
-        <div className="hidden md:flex gap-8 text-[11px] uppercase tracking-[0.2em] font-medium">
-          <a href="#storia" className="hover:text-lemon transition-colors">
-            La Storia
-          </a>
-          <a href="#camere" className="hover:text-lemon transition-colors">
-            Ambienti
-          </a>
-          <a href="#galleria" className="hover:text-lemon transition-colors">
-            Galleria
-          </a>
-          <a href="#servizi" className="hover:text-lemon transition-colors">
-            Servizi
-          </a>
-          <a href="#posizione" className="hover:text-lemon transition-colors">
-            Posizione
-          </a>
-          <a href="#recensioni" className="hover:text-lemon transition-colors">
-            Recensioni
-          </a>
-        </div>
         <a
           href={BOOKING_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white text-stone-900 px-5 py-2 text-[11px] uppercase tracking-widest font-semibold hover:bg-lemon transition-colors"
+          className="bg-white text-stone-900 px-5 py-2.5 text-[11px] uppercase tracking-widest font-semibold shadow-lg ring-1 ring-black/5 hover:bg-lemon transition-colors"
         >
           Prenota
         </a>
       </nav>
+      <div className="hidden lg:flex fixed top-0 inset-x-0 z-40 h-20 justify-center items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-medium mix-blend-difference text-white pointer-events-none">
+        <a href="#storia" className="hover:text-lemon transition-colors pointer-events-auto">
+          La Storia
+        </a>
+        <a href="#camere" className="hover:text-lemon transition-colors pointer-events-auto">
+          Ambienti
+        </a>
+        <a href="#galleria" className="hover:text-lemon transition-colors pointer-events-auto">
+          Galleria
+        </a>
+        <a href="#servizi" className="hover:text-lemon transition-colors pointer-events-auto">
+          Servizi
+        </a>
+        <a href="#posizione" className="hover:text-lemon transition-colors pointer-events-auto">
+          Posizione
+        </a>
+        <a href="#recensioni" className="hover:text-lemon transition-colors pointer-events-auto">
+          Recensioni
+        </a>
+      </div>
 
       {/* Hero */}
       <section
